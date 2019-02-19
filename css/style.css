@@ -1,0 +1,175 @@
+
+@font-face {
+  src: url("../assets/fonts/Cairo/Cairo-Black.ttf") format("truetype");
+  font-family: "Cairo";
+  font-weight: 900;
+}@font-face {
+  src: url("../assets/fonts/Cairo/Cairo-Bold.ttf") format("truetype");
+  font-family: "Cairo";
+  font-weight: bold;
+}
+@font-face {
+  src: url("../assets/fonts/Cairo/Cairo-Regular.ttf") format("truetype");
+  font-family: "Cairo";
+}
+@font-face {
+  src: url("../assets/fonts/Cairo/Cairo-Light.ttf") format("truetype");
+  font-family: "Cairo";
+  font-weight: lighter;
+}
+p {
+  line-height: 115%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo";
+  background-color: black;
+  color: white;
+}
+h2 {
+  font-weight: bold;
+  font-size: 40px;
+}
+.cta, .cta-1 {
+  box-sizing: initial;
+  transition: all 0.2s;
+  display: block;
+  margin: 16px;
+  margin-left: 0;
+  width: 220px;
+  height: 35px;
+  line-height: 35px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50px;
+  background: black;
+  border: 3px solid black;
+}
+.cta-1:hover {
+  font-size: 18px;
+}
+
+.cta-2 {
+  background: white;
+  color: black;
+}
+.cta-2:hover {
+  background: black;
+  color: white;
+}
+
+header {
+  height: 100px;
+  padding: 16px;
+}
+.top-header {
+  display: flex;
+  justify-content: space-between;
+}
+.options,
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+nav {
+  margin-top: 16px;
+}
+
+nav ul {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 350px;
+}
+
+.hero {
+  position: relative;
+  margin: 16px;
+  height: calc(100vh - 124px);
+  background: white;
+  color: black;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 330px;
+}
+.vertical {
+  font-size: 60px;
+  font-weight: 900;
+  position: absolute;
+  transform: rotate(-90deg);
+}
+.vertical-bottom {
+  bottom: 89px;
+  right: -101px;
+}
+.vertical-top {
+  top: 85px;
+  left: -101px;
+}
+.concept, .gallery {
+  height: 400px;
+  width: 100%;
+  margin-top: 80px;
+}
+.concept-illustration {
+  position: relative;
+  margin: 16px;
+  float: left;
+  background: white;
+  color: black;
+  width: 45%;
+  height: 100%;
+}
+.gallery-illustration {
+  position: relative;
+  margin: 16px;
+  float: right;
+  background: white;
+  color: black;
+  width: 45%;
+  height: 100%;
+}
+.concept-text, .gallery-text {
+  margin: 16px;
+  height: 100%;
+  transform: translateY(150px);
+}
+.explanation {
+  margin: 64px;
+  margin-top: 100px;
+  height: 500px;
+  background: url("/assets/img/explications.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gallery .cta {
+  display: inline-block;
+}
+.gallery .cta-1 {
+  background: white;
+  color: black;
+  border: 3px solid white;
+}
+
+.gallery .cta-2 {
+  margin-top: 50px;
+  background: initial;
+  color: white;
+  border: 3px solid white;
+}
+
+.gallery .cta-2:hover {
+  background: white;
+  color: black;
+}
+.gallery {
+  margin-bottom: 50px;
+}

@@ -28,7 +28,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-7px);
   }
   to {
     transform: translateY(0px);
@@ -165,7 +165,7 @@ nav {
   transform: translateX(-50%);
 }
 .scroll h3 {
-  animation: float 6s forwards infinite;
+  animation: float 3s ease-in-out infinite;
 }
 .scroll-line {
   width: 2px;

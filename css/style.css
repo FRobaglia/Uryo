@@ -24,6 +24,8 @@ p {
   box-sizing: border-box;
 }
 body {
+  opacity: 0;
+  transition: opacity 1s;
   font-family: "Cairo";
   background-color: black;
   color: white;
@@ -127,7 +129,7 @@ nav ul {
   width: 330px;
 }
 .vertical {
-  background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);;
+  background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 60px;
@@ -148,9 +150,37 @@ nav ul {
   transform: translateY(-35px);
 }
 .concept, .gallery {
-  height: 400px;
   width: 100%;
   margin-top: 80px;
+}
+section {
+  height: 80vh;
+}
+
+nav li::before {
+  transition: opacity 0.3s;
+  opacity: 0;
+  border-radius: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  min-width: 55px;
+  min-height: 4px;
+  top: 4px;
+  background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);
+}
+nav li:nth-child(1)::before {
+  opacity: 1;
+  left: 144px;
+}
+nav li:nth-child(2)::before {
+  left: 239px;
+}
+nav li:nth-child(3)::before {
+  left: 344px;
+}
+nav li:nth-child(2):hover::before, nav ul li:nth-child(3):hover::before {
+  opacity: 1;
 }
 .concept-illustration {
   position: relative;
@@ -178,7 +208,7 @@ nav ul {
   line-height: 30px;
   margin: 16px;
   height: 100%;
-  transform: translate(40px, 55px);
+  transform: translate(40px, 100px);
 }
 
 .gallery-text p {

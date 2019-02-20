@@ -22,6 +22,18 @@
   stroke-dashoffset: 0;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 6px;
+}
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(239.68deg, #8500EE -0.07%, #13A4CD 73.79%);
+}
+html::-webkit-scrollbar-track {
+  background: #ddd;
+}
 p {
   line-height: 150%;
 }
@@ -29,14 +41,19 @@ p {
   box-sizing: border-box;
 }
 body {
+  overflow-x: hidden;
   transition: opacity 1s;
   font-family: "Cairo";
   background-color: black;
   color: white;
 }
 h2 {
+  background: linear-gradient(239.68deg, #8500EE -0.07%, #13A4CD 73.79%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 15px;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 16px;
 }
 .loader {
   opacity: 0;
@@ -256,12 +273,24 @@ nav ul {
 }
 section {
   opacity: 0;
-  transition: opacity 0.5s;
+  transform: translateY(75px);
+  transition: opacity 0.5s, transform 0.5s;
   height: 80vh;
+}
+.to-top {
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.3s;
+  transform: translateY(30px);
+  text-align: center;
+}
+.to-top:hover {
+  transform: scale(1.15) translateY(15px);
 }
 
 section.is-reached{
   opacity: 1;
+  transform: translateY(0px);
 }
 
 nav li:last-child {

@@ -72,5 +72,5 @@ new Waypoint({
       typeWriterThree();
     }, 1400);
   },
-  offset: '50%'
+  offset: '65%'
 });

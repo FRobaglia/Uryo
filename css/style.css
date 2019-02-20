@@ -54,7 +54,7 @@ h2 {
   font-weight: bold;
   text-align: center;
   border-radius: 50px;
-  background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);
+  background: linear-gradient(239.68deg, #8500EE -0.07%, #13A4CD 73.79%);
 }
 
 .cta-1:hover {
@@ -65,7 +65,6 @@ a {
 }
 main {
   margin: 50px 100px;
-  max-width: 1500px;
 }
 header {
   height: 100vh;
@@ -91,7 +90,7 @@ strong::before {
   bottom: 0px;
   width: 100%;
   height: 3px;
-  background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);
+  background: linear-gradient(239.68deg, #8500EE -0.07%, #13A4CD 73.79%);
 }
 strong:hover::before {
   height: 24px;
@@ -147,7 +146,61 @@ nav ul {
   position: fixed;
   margin-top: 20px;
 }
+.footer {
+  z-index: 15;
+  padding-bottom: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.footer ul li {
+  cursor: pointer;
+}
+.footer .social {
+  float: left;
+  width: 150px;
+  transform: translateX(-20px);
+  justify-content: space-evenly;
+  display: flex;
+}
 
+.footer .social li {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.footer .social li:hover {
+  opacity: 1;
+}
+.footer .social li:nth-child(1) {
+  width: 10px;
+  height: 20px;
+  background: url('/assets/img/facebook.svg');
+  background-size: cover;
+}
+.footer .options li:nth-child(1)::after {
+  display: inline-block;
+  content: "";
+  background: url("/assets/img/en.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 10px;
+  transform: translateX(4px);
+}
+.footer .social li:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  background: url('/assets/img/insta.svg');
+  background-size: cover;
+}
+
+.footer .options {
+  width: 250px;
+  justify-content: space-evenly;
+  float: right;
+  display: flex;
+}
 .hero-text {
   position: absolute;
   top: 50%;
@@ -155,7 +208,7 @@ nav ul {
   width: 330px;
 }
 .vertical {
-  background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);
+  background: linear-gradient(239.68deg, #8500EE -0.07%, #13A4CD 73.79%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 60px;
@@ -198,7 +251,7 @@ nav li:last-child {
   min-height: 4px;
   top: 4px;
   left: 144px;
-  background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);
+  background: linear-gradient(239.68deg, #8500EE -0.07%, #13A4CD 73.79%);
 }
 
 nav ul li:nth-child(1):hover ~ li:last-child {
@@ -272,8 +325,10 @@ nav ul li:nth-child(3):hover ~ li:last-child {
 .explanation {
   font-size: 12px;
   position: relative;
+  margin: 0 auto;
   margin-top: 100px;
   height: 500px;
+  width: 1000px;
   background: url("/assets/img/explications.png");
   background-repeat: no-repeat;
   background-size: contain;

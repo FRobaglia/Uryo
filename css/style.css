@@ -39,20 +39,22 @@ h2 {
   margin: 16px;
   margin-left: 0;
   width: 220px;
-  height: 35px;
-  line-height: 35px;
+  height: 38px;
+  line-height: 38px;
   font-weight: bold;
   text-align: center;
   border-radius: 50px;
-  background: black;
-  border: 3px solid black;
+  background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);*
 }
 .cta-1:hover {
   font-size: 18px;
 }
 
 .cta-2 {
-  background: white;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);
+  background: transparent;
   color: black;
 }
 .cta-2:hover {
@@ -61,42 +63,66 @@ h2 {
 }
 
 header {
-  height: 100px;
-  padding: 16px;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(-2px);
+  background: url("/assets/img/landing.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .top-header {
   display: flex;
   justify-content: space-between;
 }
-.options,
+nav {
+  float: left;
+}
 .icons {
   display: flex;
-  justify-content: space-between;
-  width: 200px;
+  justify-content: space-around;
+  width: 150px;
+  position: absolute;
+  right: 20px;
 }
-nav {
-  margin-top: 16px;
+.icons li {
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+.icons li:nth-child(1) {
+  width: 23px;
+  height: 20px;
+  background: url(/assets/img/heart.svg);
+}
+.icons li:nth-child(2) {
+  width: 21px;
+  height: 20px;
+  background: url(/assets/img/profile.svg);
+}
+.icons li:nth-child(3) {
+  width: 17px;
+  height: 20px;
+  background: url(/assets/img/cart.svg);
+}
 nav ul {
-  margin: 0 auto;
+  font-weight: bold;
   display: flex;
   justify-content: space-evenly;
   width: 350px;
 }
-
-.hero {
-  position: relative;
-  margin: 16px;
-  height: calc(100vh - 124px);
-  background: white;
-  color: black;
+.fixed {
+  width: 100%;
+  padding: 16px;
+  position: fixed;
+  margin-top: 20px;
 }
 
 .hero-text {
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 50%;
+  left: 9%;
   width: 330px;
 }
 .vertical {
@@ -112,6 +138,10 @@ nav ul {
 .vertical-top {
   top: 85px;
   left: -101px;
+}
+.logo-img {
+  float: left;
+  transform: translateY(-35px);
 }
 .concept, .gallery {
   height: 400px;

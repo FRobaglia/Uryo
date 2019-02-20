@@ -1,8 +1,18 @@
 let sections = document.querySelectorAll('section');
 let svgs = document.querySelectorAll('.pattern');
+
 setTimeout(() => {
-  document.querySelector('body').style.opacity = 1;
-}, 500);
+  document.querySelector('.loader').style.opacity = 1;
+  
+}, 100);
+
+setTimeout(() => {
+  document.querySelector('.loader').style.opacity = 0;
+  
+}, 2100);
+setTimeout(() => {
+  document.querySelector('header').style.opacity = 1;
+}, 4100);
 
 sections.forEach(function(section) {
   var element = section;

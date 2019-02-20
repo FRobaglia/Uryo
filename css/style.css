@@ -35,9 +35,11 @@ h2 {
   font-size: 40px;
 }
 .cta-1 {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  background-size: 200% auto;
   color: white;
   box-sizing: initial;
-  transition: all 0.2s;
+  transition: all 0.3s;
   display: block;
   margin: 16px;
   margin-left: 0;
@@ -48,6 +50,10 @@ h2 {
   text-align: center;
   border-radius: 50px;
   background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);
+}
+
+.cta-1:hover {
+  color: black;
 }
 a {
   display: block;
@@ -61,7 +67,7 @@ header {
   width: 100%;
   background: url("/assets/img/landing.png");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
 }
 strong {
   font-weight: bold;
@@ -150,34 +156,37 @@ nav ul {
   margin-top: 80px;
 }
 section {
+  opacity: 0;
+  transition: opacity 0.5s;
   height: 80vh;
 }
 
-nav li::before {
-  transition: opacity 0.3s;
-  opacity: 0;
+section.is-reached{
+  opacity: 1;
+}
+
+nav li:last-child {
+  transition: left 0.3s;
   border-radius: 1px;
-  content: "";
   display: block;
   position: absolute;
   min-width: 55px;
   min-height: 4px;
   top: 4px;
+  left: 144px;
   background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);
 }
-nav li:nth-child(1)::before {
-  opacity: 1;
+
+nav ul li:nth-child(1):hover ~ li:last-child {
   left: 144px;
 }
-nav li:nth-child(2)::before {
+nav ul li:nth-child(2):hover ~ li:last-child {
   left: 239px;
 }
-nav li:nth-child(3)::before {
+nav ul li:nth-child(3):hover ~ li:last-child {
   left: 344px;
 }
-nav li:nth-child(2):hover::before, nav ul li:nth-child(3):hover::before {
-  opacity: 1;
-}
+
 .concept-illustration {
   position: relative;
   margin: 16px;

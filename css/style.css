@@ -81,7 +81,7 @@ main {
 }
 header {
   opacity: 0;
-  transition: opacity 2s;
+  transition: opacity 0.5s;
   height: 100vh;
   width: 100%;
   background: url("/assets/img/landing.svg");
@@ -295,6 +295,11 @@ nav ul li:nth-child(3):hover ~ li:last-child {
   bottom: 340px;
   right: 220px;
 }
+.pattern3 {
+  transform: rotateY(180deg);
+  left: 220px;
+  top: 230px;
+}
 
 .pattern {
   stroke-dasharray: 200;
@@ -302,7 +307,7 @@ nav ul li:nth-child(3):hover ~ li:last-child {
 }
 
 .pattern.is-reached {
-  animation: draw 3s forwards;
+  animation: draw 6s forwards;
 }
   
 
@@ -370,8 +375,8 @@ nav ul li:nth-child(3):hover ~ li:last-child {
 }
 .third-typed {
   width: 150px;
-  top: 250px;
-  left: 30px;
+  top: 205px;
+  left: 50px;
 }
 .gallery {
   margin-bottom: 50px;

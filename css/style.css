@@ -17,6 +17,11 @@
   font-family: "Cairo";
   font-weight: lighter;
 }
+@keyframes draw {
+  to {
+  stroke-dashoffset: 0;
+  }
+}
 p {
   line-height: 115%;
 }
@@ -70,7 +75,25 @@ header {
   background-position: center;
 }
 strong {
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
   font-weight: bold;
+}
+
+strong::before {
+  transition: all 0.3s;
+  z-index: -1;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  width: 110%;
+  height: 2px;
+  background: linear-gradient(235.27deg, #952A97 -0.07%, #13A4CD 73.79%);
+}
+strong:hover::before {
+  height: 20px;
 }
 .top-header {
   display: flex;
@@ -167,7 +190,6 @@ section.is-reached{
 
 nav li:last-child {
   transition: left 0.3s;
-  border-radius: 1px;
   display: block;
   position: absolute;
   min-width: 55px;
@@ -186,6 +208,28 @@ nav ul li:nth-child(2):hover ~ li:last-child {
 nav ul li:nth-child(3):hover ~ li:last-child {
   left: 344px;
 }
+.svg {
+  position: absolute;
+  width: 200px;
+}
+.pattern1 {
+  bottom: 160px;
+  right: 220px;
+}
+.pattern2 {
+  bottom: 340px;
+  right: 220px;
+}
+
+.pattern {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.pattern.is-reached {
+  animation: draw 3s forwards;
+}
+  
 
 .concept-illustration {
   position: relative;
@@ -209,7 +253,7 @@ nav ul li:nth-child(3):hover ~ li:last-child {
   width: 45%;
   height: 100%;
 }
-.concept-text p, .gallery-text p{
+.concept-text p, .gallery-text p {
   line-height: 30px;
   margin: 16px;
   height: 100%;
@@ -225,12 +269,34 @@ nav ul li:nth-child(3):hover ~ li:last-child {
   transform: translate(60px, 55px);
 }
 .explanation {
+  font-size: 12px;
+  position: relative;
   margin: 64px;
   margin-top: 100px;
   height: 500px;
   background: url("/assets/img/explications.png");
   background-repeat: no-repeat;
   background-size: contain;
+}
+.explanation p {
+  position: absolute;
+}
+
+.first-typed {
+  width: 200px;
+  top: 80px;
+  right: 10px;
+}
+
+.second-typed {
+  width: 200px;
+  bottom : 200px;
+  right: 10px;
+}
+.third-typed {
+  width: 150px;
+  top: 250px;
+  left: 30px;
 }
 .gallery {
   margin-bottom: 50px;

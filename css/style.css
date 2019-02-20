@@ -22,6 +22,18 @@
   stroke-dashoffset: 0;
   }
 }
+
+@keyframes float {
+  from {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -44,8 +56,8 @@ body {
   overflow-x: hidden;
   transition: opacity 1s;
   font-family: "Cairo";
-  background-color: black;
-  color: white;
+  background-color: #111111;
+  color: rgb(245, 244, 244);
 }
 h2 {
   background: linear-gradient(239.68deg, #8500EE -0.07%, #13A4CD 73.79%);
@@ -54,6 +66,9 @@ h2 {
   margin-top: 15px;
   font-weight: bold;
   font-size: 16px;
+}
+h3 {
+  font-weight: bold;
 }
 .loader {
   opacity: 0;
@@ -142,6 +157,22 @@ strong:hover::before {
 }
 nav {
   float: left;
+}
+.scroll {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scroll h3 {
+  animation: float 6s forwards infinite;
+}
+.scroll-line {
+  width: 2px;
+  height: 52px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 .icons {
   display: flex;

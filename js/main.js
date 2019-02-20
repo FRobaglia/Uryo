@@ -66,9 +66,11 @@ new Waypoint({
     svgs.forEach(function(svg) {
       svg.classList.add("is-reached");
     });
-    typeWriterOne();
-    typeWriterTwo();
-    typeWriterThree();
+    setTimeout(() => {
+      typeWriterOne();
+      typeWriterTwo();
+      typeWriterThree();
+    }, 1400);
   },
   offset: '50%'
 });

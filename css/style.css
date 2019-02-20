@@ -74,6 +74,7 @@ h2 {
   color: black;
 }
 a {
+  cursor: pointer;
   display: block;
 }
 main {
@@ -307,7 +308,7 @@ nav ul li:nth-child(3):hover ~ li:last-child {
 }
 
 .pattern.is-reached {
-  animation: draw 6s forwards;
+  animation: draw 3s forwards;
 }
   
 

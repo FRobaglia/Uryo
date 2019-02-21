@@ -186,6 +186,13 @@ strong {
   font-weight: black;
 }
 
+.kway {
+  filter: brightness(150%);
+  position: absolute;
+  bottom: -100px;
+  left: 223px;
+  transform: scale(0.6);
+}
 strong:hover {
   color: black;
 }
@@ -409,8 +416,8 @@ nav ul li:nth-child(3):hover ~ li:last-child {
   width: 200px;
 }
 .pattern1 {
-  bottom: 160px;
-  right: 220px;
+  bottom: 120px;
+  right: 240px;
 }
 .pattern2 {
   bottom: 340px;
@@ -418,8 +425,8 @@ nav ul li:nth-child(3):hover ~ li:last-child {
 }
 .pattern3 {
   transform: rotateY(180deg);
-  left: 220px;
-  top: 230px;
+  left: 230px;
+  top: 270px;
 }
 .radient {
   z-index: 15;
@@ -494,19 +501,19 @@ nav ul li:nth-child(3):hover ~ li:last-child {
 
 .first-typed {
   width: 200px;
-  top: 80px;
+  top: 70px;
   right: 10px;
 }
 
 .second-typed {
   width: 200px;
-  bottom : 200px;
-  right: 10px;
+  bottom : 157px;
+  right: 25px;
 }
 .third-typed {
   width: 150px;
-  top: 205px;
-  left: 50px;
+  top: 245px;
+  left: 80px;
 }
 .gallery {
   margin-bottom: 50px;

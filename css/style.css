@@ -48,7 +48,7 @@ html::-webkit-scrollbar-thumb {
   background: linear-gradient(239.68deg, #8500EE -0.07%, #13A4CD 73.79%);
 }
 html::-webkit-scrollbar-track {
-  background: #ddd;
+  opacity: 0;
 }
 p {
   line-height: 150%;
@@ -142,7 +142,6 @@ h3 {
 }
 .cta-2:hover {
   transform: translateY(-5px);
-  
 }
 .gallery .cta-2:hover {
   transform: translate(60px, 50px);
@@ -231,7 +230,7 @@ nav {
   transform: translateX(-50%);
 }
 .scroll h3 {
-  animation: float 3s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 .scroll-line {
   width: 2px;
@@ -358,7 +357,7 @@ nav ul {
 }
 .vertical-top {
   bottom: 109px;
-  left: -121px;
+  left: -105px;
 }
 .logo-img {
   float: left;
@@ -379,11 +378,11 @@ section {
   cursor: pointer;
   width: 100%;
   transition: transform 0.3s;
-  transform: translateY(30px);
+  transform: translateY(30px) scale(0.9);
   text-align: center;
 }
 .to-top:hover {
-  transform: scale(1.15) translateY(15px);
+  transform: scale(1) translateY(15px);
 }
 
 section.is-reached{
@@ -443,7 +442,7 @@ nav ul li:nth-child(3):hover ~ li:last-child {
 }
 
 .pattern.is-reached {
-  animation: draw 3s forwards;
+  animation: draw 2s forwards;
 }
   
 
@@ -478,7 +477,7 @@ nav ul li:nth-child(3):hover ~ li:last-child {
 }
 .gallery-text p {
   width: 400px;
-  transform: translate(10px, -25px);
+  transform: translate(10px, 15px);
 }
 .gallery-text a {
   transform: translate(60px, 55px);
@@ -514,7 +513,4 @@ nav ul li:nth-child(3):hover ~ li:last-child {
   width: 150px;
   top: 245px;
   left: 80px;
-}
-.gallery {
-  margin-bottom: 50px;
 }

@@ -27,21 +27,21 @@ function typeWriterOne() {
   if (i < txt1.length) {
     container1.innerHTML += txt1.charAt(i);
     i++;
-    setTimeout(typeWriterOne, 30);
+    setTimeout(typeWriterOne, 20);
   }
 }
 function typeWriterTwo() {
   if (j < txt2.length) {
     container2.innerHTML += txt2.charAt(j);
     j++;
-    setTimeout(typeWriterTwo, 25);
+    setTimeout(typeWriterTwo, 15);
   }
 }
 function typeWriterThree() {
   if (k < txt1.length) {
     container3.innerHTML += txt3.charAt(k);
     k++;
-    setTimeout(typeWriterThree, 35);
+    setTimeout(typeWriterThree, 20);
   }
 }
 function typeWriterFour() {
@@ -93,7 +93,7 @@ new Waypoint({
       typeWriterOne();
       typeWriterTwo();
       typeWriterThree();
-    }, 1400);
+    },900);
   },
   offset: '65%'
 });
